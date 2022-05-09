@@ -13,13 +13,21 @@ namespace Entra21.WhileEA
             double peso = 0;
             int quantidadePessoas = 0;
 
-            while ((peso > 0) || (peso < 300))
+            while ((peso > -1) && (peso < 301))
             {
-                Console.WriteLine("Informe o seu peso: ");
-                peso = Convert.ToDouble(Console.ReadLine());
-
+                if (peso > 0)
+                {
+                    Console.WriteLine("Informe o seu peso: ");
+                    peso = Convert.ToDouble(Console.ReadLine());
+                }
+                else if (peso < 300)
+                {
+                    Console.WriteLine("Informe o seu peso: ");
+                    peso = Convert.ToDouble(Console.ReadLine());
+                }
                 quantidadePessoas = quantidadePessoas + 1;
             }
+            Console.WriteLine("O número de pessoas que informaram o peso foi: " + quantidadePessoas);
             
         }
     }

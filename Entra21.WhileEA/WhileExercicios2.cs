@@ -16,13 +16,16 @@ namespace Entra21.WhileEA
             int quantidadeCarros = Convert.ToInt32(Console.ReadLine());          
             int mediaAno = 0;
             double mediaValor = 0;
-            indice = indice + 1;
+            double valorTotalCarro = 0;
+            int anoTotalCarro = 0;
+            int totalCarrosG = 0;
+            int totalCarrosA = 0;
 
 
             while (indice < quantidadeCarros)
             {
                 Console.Write("Informe o modelo do carro: ");
-                string modeloCarro = Console.ReadLine();
+                string modeloCarro = Console.ReadLine().ToUpper();
 
                 Console.Write("Informe o valor do carro: ");
                 double valorCarro = Convert.ToDouble(Console.ReadLine());
@@ -30,15 +33,29 @@ namespace Entra21.WhileEA
                 Console.Write("Informe o ano do carro: ");
                 int anoCarro = Convert.ToInt32(Console.ReadLine());
 
-                int somaAno = anoCarro * quantidadeCarros;
-                int mediaAno = somaAno / indice;
+                if (modeloCarro.StartsWith("G"))
+                {
+                    totalCarrosG = totalCarrosG + 1;
+                }
+                else if (modeloCarro.StartsWith("A"))
+                {
+                    totalCarrosA = totalCarrosA + 1;
+                }
 
-                double somaValor = valorCarro * quantidadeCarros;
-                double mediaValor = somaValor / indice;
+                anoTotalCarro = anoTotalCarro + anoCarro;
+                valorTotalCarro = valorTotalCarro + valorCarro;
+
+                indice = indice + 1;
                 
 
             }
-            Console.WriteLine("A media de ano dos carros é :" + mediaAno);
+            mediaAno = anoTotalCarro / quantidadeCarros;
+            Console.WriteLine("A média de ano dos carros é: " + mediaAno);
+
+            mediaValor = valorTotalCarro / quantidadeCarros;
+            Console.WriteLine("A média do valor dos carros é: " + mediaValor);
+
+
 
 
         }
