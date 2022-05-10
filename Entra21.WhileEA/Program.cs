@@ -2,7 +2,9 @@
 
 Console.WriteLine(@"--------Menu--------
 1 | Exercicio1
-2 | Exercicio2");
+2 | Exercicio2
+3 | Exercicio3
+11 | Exercicio11");
 Console.Write("Informe a ação desejada: ");
 int menu = Convert.ToInt32(Console.ReadLine());
 
@@ -15,4 +17,14 @@ else if (menu == 2)
 {
     WhileExercicios2 bestExercicio = new WhileExercicios2();
     bestExercicio.Executar();
+}
+else if (menu == 3)
+{
+    WhileExercicios3 dorCabeça = new WhileExercicios3();
+    dorCabeça.Executar();
+}
+else if (menu == 11)
+{
+    WhileExercicio11 goodExercicio = new WhileExercicio11();
+    goodExercicio.Executar();
 }
