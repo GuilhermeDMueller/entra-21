@@ -17,7 +17,18 @@ namespace Entra21.WhileEA
 
             Console.WriteLine("Informe o número2: ");
             int numero2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(@"=__________MENU___________
+1         |      Soma
+2         |      Subtração
+3         |      Multiplicação
+4         |      Divisão
+5         |      Sair");
+            
+            while (numeroMenu < 5)
             {
+                Console.WriteLine("Informe a ação: ");
+                int numeroAcao = Convert.ToInt32(Console.ReadLine());
 
             }
         }
