@@ -54,10 +54,6 @@ namespace Entra21.WhileEA
 
             mediaValor = valorTotalCarro / quantidadeCarros;
             Console.WriteLine("A média do valor dos carros é: " + mediaValor);
-
-
-
-
         }
 
     }
