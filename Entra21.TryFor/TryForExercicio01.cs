@@ -10,9 +10,8 @@ namespace Entra21.TryFor
     {
         public void Executar()
         {
-            int indice = 0;
 
-            while (indice < 13)
+            for (int indice = 0; indice < 13; indice = indice + 1)
             {
                 Console.WriteLine("Informe o nome da peça: ");
                 string nome = Console.ReadLine();
