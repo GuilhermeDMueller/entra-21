@@ -8,6 +8,7 @@ Console.WriteLine(@"-----------Menu----------
 4 | Exercício04
 5 | Exercício05
 6 | Exercício06
+7 | Exercício07
 
 ");
 Console.Write("Informe a ação desejada: ");
@@ -42,4 +43,9 @@ else if (acao == 6)
 {
     TryForExercicio06 chegaDeExercicio = new TryForExercicio06();
     chegaDeExercicio.Executar();
+}
+else if (acao == 7)
+{
+    TryForExercicio07 naoAcabaExercicio = new TryForExercicio07();
+    naoAcabaExercicio.Executar();
 }
