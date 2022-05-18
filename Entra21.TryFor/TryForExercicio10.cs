@@ -12,10 +12,15 @@ namespace Entra21.TryFor
         {
             Console.WriteLine("Informe o número desejado: ");
             int numero = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
 
-           while (numero %2 == 0 )
+           while (numero %2 == 0)
             {
-                Console.WriteLine(" " + numero - 2);
+                if (numero == 10)
+                {
+                    numero = numero - 2;
+                    Console.WriteLine("Número: " + numero);
+                }
             }
 
            

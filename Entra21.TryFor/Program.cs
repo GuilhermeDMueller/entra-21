@@ -11,6 +11,7 @@ Console.WriteLine(@"-----------Menu----------
 7 | Exercício07
 8 | Exercício08
 10| Exercício10
+12| Exercício12
 
 ");
 Console.Write("Informe a ação desejada: ");
@@ -60,4 +61,10 @@ else if (acao == 10)
 {
     TryForExercicio10 shadowExercicio = new TryForExercicio10();
     shadowExercicio.Executar();
+
+}
+else if (acao == 12)
+{
+    TryForExercicio12 sublimeExercicio = new TryForExercicio12();
+    sublimeExercicio.Executar();
 }
