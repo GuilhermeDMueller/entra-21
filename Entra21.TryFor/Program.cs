@@ -12,7 +12,7 @@ Console.WriteLine(@"-----------Menu----------
 8 | Exercício08
 10| Exercício10
 12| Exercício12
-
+13| Exercício13
 ");
 Console.Write("Informe a ação desejada: ");
 int acao = Convert.ToInt32(Console.ReadLine());
@@ -67,4 +67,9 @@ else if (acao == 12)
 {
     TryForExercicio12 sublimeExercicio = new TryForExercicio12();
     sublimeExercicio.Executar();
+}
+else if (acao == 13)
+{
+    TryForExercicio13 longExercicio = new TryForExercicio13();
+    longExercicio.Executar();
 }

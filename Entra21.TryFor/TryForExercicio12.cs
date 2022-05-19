@@ -22,7 +22,7 @@ namespace Entra21.TryFor
             double mediaSanduiches = 0;
             double mediaPizzas = 0;
 
-            Console.Write(@"----------------------------Menu----------------------------
+            Console.WriteLine(@"----------------------------Menu----------------------------
 Códigos   |   Tipos     |       nome                         |       Valor
 1         | Bolos       | Bolo Brigadeiro                    | R$ 29.50
 2         | Bolos       | Bolo Floresta Negra                | R$ 2.00
@@ -42,12 +42,16 @@ Códigos   |   Tipos     |       nome                         |       Valor
 15        | Pizzas      | Portuguesa                         | R$ 27.50
 16                      | Sair");
 
-            while (numeroMenu != 16)
+            while ((numeroMenu != 16))
             {
                 Console.WriteLine("Informe o Código: ");
                 numeroMenu = Convert.ToInt32(Console.ReadLine());
 
-                if ((numeroMenu >= 1) || (numeroMenu <= 5))
+                if (numeroMenu > 16)
+                {
+                    Console.WriteLine("Informe um código menor do que 16!");
+                }
+                else if ((numeroMenu >= 1) || (numeroMenu <= 5))
                 {
                     quantidadeBolos = quantidadeBolos + 1;
                 }
@@ -64,14 +68,17 @@ Códigos   |   Tipos     |       nome                         |       Valor
                     quantidadePizzas = quantidadePizzas + 1;
                 }
             }
-            mediaBolos = quantidadeBolos *
-            mediaProdutos = 
+            mediaBolos = quantidadeBolos * 87.16;
+            mediaDoces = quantidadeDoces * 22.53;
+            mediaSanduiches = quantidadeSanduiches * 81.78;
+            mediaPizzas = quantidadePizzas * 55.26;
+            mediaProdutos = mediaBolos + mediaDoces + mediaSanduiches + mediaPizzas;
             Console.Clear();
-            Console.Write("A quantidade de bolos escolhidos foi: " + quantidadeBolos);
-            Console.Write("A quantidade de doces escolhidos foi: " + quantidadeDoces);
-            Console.Write("A quantidade de sanduíches escolhidos foi: " + quantidadeSanduiches);
-            Console.Write("A quantidade de pizzas escolhidas foi: " + quantidadePizzas);
-            Console.Write("A média dos produtos vendidos foi: " + mediaProdutos);
+            Console.WriteLine("A quantidade de bolos escolhidos foi: " + quantidadeBolos);
+            Console.WriteLine("A quantidade de doces escolhidos foi: " + quantidadeDoces);
+            Console.WriteLine("A quantidade de sanduíches escolhidos foi: " + quantidadeSanduiches);
+            Console.WriteLine("A quantidade de pizzas escolhidas foi: " + quantidadePizzas);
+            Console.WriteLine("A média dos produtos vendidos foi: " + mediaProdutos);
         }
     }
 }
