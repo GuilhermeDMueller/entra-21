@@ -60,7 +60,9 @@ namespace Entra21.TryFor
             }
 
             Console.Clear();    
-            Console.WriteLine("O jogador (a) que o menor peso é: ");
+            Console.WriteLine("O jogador (a) que tem o menor peso é: " + menorPeso);
+            Console.WriteLine("O jogador (a) que tem o maior peso é: " + maiorPeso);
+            Console.WriteLine("O jogador (a) que tem o menor nome é:");
         }
     }
 }
